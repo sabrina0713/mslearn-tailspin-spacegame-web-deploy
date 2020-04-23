@@ -1,10 +1,10 @@
-trigger:
+  trigger:
   - '*'
   
-variables:
+  variables:
     buildConfiguration: 'Release'
   
-stages:
+  stages:
   - stage: 'Build'
     displayName: 'Build the web application'
     jobs: 
@@ -64,7 +64,7 @@ stages:
   
       - publish: '$(Build.ArtifactStagingDirectory)'
         artifact: drop
-
+  
   - stage: 'Deploy'
     displayName: 'Deploy the web application'
     dependsOn: Build
