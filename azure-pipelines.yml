@@ -200,8 +200,8 @@ stages:
               dacpacFile: '$(Pipeline.Workspace)/dropDacpac/Tailspin.SpaceGame.Database/bin/Debug/Tailspin.SpaceGame.Database.dacpac'
               ipDetectionMethod: 'AutoDetect'
           - task: PowerShell@2
-              displayName: 'Remove "schemaChanged" pipeline variable'
-              inputs:
+            displayName: 'Remove "schemaChanged" pipeline variable'
+            inputs:
                 targetType: 'inline'
                 script: | 
                   Install-Module VSTeam -Scope CurrentUser -Force
